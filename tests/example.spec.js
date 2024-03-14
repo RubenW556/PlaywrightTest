@@ -11,13 +11,8 @@ test.describe('New Todo', () => {
     await expect(page).toHaveTitle(/Content/);
   });
 
-// test('get started link', async ({ page }) => {
-//   await page.goto('http://win-1ics5jffm16.dev.local:9080/navigator/');
-//
-//   // Click the get started link.
-//   await page.getByRole('link', { name: 'Get started' }).click();
-//
-//   // Expects page to have a heading with the name of Installation.
-//   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-// });
+  test('get started link', async ({ page }) => {
+    await page.goto('http://win-1ics5jffm16.dev.local:9080/navigator/');
+    await page.getByText("Welcome to IBM Content Navigator")
+  });
 })
